@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Catégorie show{% endblock %}
+
+{% block body %}
+    <h1>Toutes les séries dans catégorie : </h1>
+
+    {% for program in programs %}
+        <div>
+            <a href="{{ path("program_show", { id: program.id }) }}"><h2>{{ program.id }} / Série : {{ program.title }} </h2></a>
+            <p>{{ program.summary }}</p>
+        </div>
+    {% else %}
+        Aucune série trouvée.
+    {% endfor %}
+{% endblock %}
