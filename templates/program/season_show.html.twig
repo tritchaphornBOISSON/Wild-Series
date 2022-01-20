@@ -15,7 +15,7 @@
         <h2>Liste des épisodes</h2>
         {% for episode in season.episodes %}
             <div>
-                <p>Episode {{ episode.number }} : {{ episode.title }}</p>
+                <a href="{{ path("program_episode_show", {program_id: program.id, season_id: season.id, episode_id: episode.id}) }}"><p>Episode {{ episode.number }} : {{ episode.title }}</p></a>
             </div>
         {% else %}
             <p>Aucune épisode trouvé.</p>
