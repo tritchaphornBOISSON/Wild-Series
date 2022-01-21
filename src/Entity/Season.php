@@ -92,9 +92,9 @@ class Season
     /**
      * @return Collection|Episode[]
      */
-    public function getEpisodes(): Collection
-    {
-        return $this->episodes;
+        public function getEpisodes(): Collection
+        {
+            return $this->episodes;
     }
 
     public function addEpisode(Episode $episode): self
